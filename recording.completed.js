@@ -7,7 +7,7 @@ module.exports = (token, payload) => {
         var topic = payload.object.topic;
         var start_time = new Date(payload.object.start_time).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }).replace(',', '');        
         var email = payload.object.host_email;
-        var uuid = payload.object.uuid;
+        var uuid = payload.object.uuid.replace(/[/\\?%*:|"<>]/g, '-');
         
         payload.object.recording_files.forEach(ele => {
             var rectype = ele.recording_type;
