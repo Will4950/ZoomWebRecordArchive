@@ -15,8 +15,9 @@ async function processFile(token, object, file) {
 	let start_time = object.start_time.replace(/[^a-z0-9]/gi, '_');
 	let id = object.id;
 	let topic = object.topic.replace(/[^a-z0-9]/gi, '_');
+	let type = file.recording_type;
 	let ext = file.file_extension.toLowerCase();
-	let filename = `${start_time} [${id}] ${topic}.${ext}`;
+	let filename = `${start_time} [${id}] ${topic}_${type}.${ext}`;
 
 	if (!fs.existsSync(directory)) fs.mkdirSync(directory, {recursive: true});
 

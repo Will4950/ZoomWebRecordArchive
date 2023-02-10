@@ -4,9 +4,11 @@ Zoom Webhook cloud recording archiver.
 
 This is a simple app that demonstrates how to use the Zoom recording.complete webhook to automatically download all cloud recordings.
 
-All cloud recordings on the account will be saved to `./downloads/<user email>/<Date>-<Meeting Topic>-<recording_type>-<uuid>.<ext>`
+All cloud recordings on the account will be saved to `./downloads/<user email>/<Date> [<Meeting ID>] <Meeting Topic>-<recording_type>.<ext>`
 
-Example: `user@user.com/Dec_7_2021-My_Zoom_Meeting-shared_screen_with_speaker_view-BY+HV+xxTzWi2xx7QTYKBQ==.mp4`
+Example: `user@user.com/2023_02_10T02_56_03Z [95202029317] Zoom_Meeting_shared_screen_with_speaker_view=.mp4`
+
+![files](files.png)
 
 # Getting Started
 
