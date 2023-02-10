@@ -1,10 +1,11 @@
 {
   "name": "zoomwebrecordarchive",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Zoom Webhook cloud recording archiver.",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node main.js",
+    "lint": "eslint main.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,14 @@
   },
   "homepage": "https://github.com/Will4950/ZoomWebRecordArchive#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.6"
+    "axios": "^1.3.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4"
   }
 }
